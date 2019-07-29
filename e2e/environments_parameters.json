@@ -1,7 +1,16 @@
 [{
   "local": {
     "seleniumAddress": "http://localhost:4444/wd/hub",
-    "baseUrl": "https://www.protractortest.org/#"
+    "baseUrl": "http://localhost:3000/"
+  },
+
+  "localDev": {
+    "seleniumAddress": "http://localhost:4444/wd/hub",
+    "baseUrl": "http://ambiante.de.dev"
+  },
+
+  "localHom": {
+    "seleniumAddress": "http://localhost:4444/wd/hub",
+    "baseUrl": "http://ambiente.de.hom"
   }
 }]
-  
