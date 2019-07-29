@@ -10,6 +10,7 @@ npm-debug.log
 *.DS_Store
 *.swp
 selenium/
+e2e/results.json
 
 # Build artifacts
 
@@ -20,5 +21,7 @@ website/bower_components/
 website/build/
 website/docgen/build/
 screenshots/
-results.json/
+e2e/results.json
 cucumber_report.html/
+report/
+package-lock.json
