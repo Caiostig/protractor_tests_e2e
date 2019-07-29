@@ -32,7 +32,7 @@ Helper.prototype.elementIsNotPresentOfDom = function (element) {
   return browser.wait(until.not(until.presenceOf(element)))
 }
 
-// Force the browser to stop
+// Force the browser to stop. Funciona sem o await
 Helper.prototype.stopBrowser = function (time) {
   browser.sleep(time)
 }
@@ -70,6 +70,17 @@ Helper.prototype.getScreenshot = function (name) {
 // This function make scrool to down on page
 Helper.prototype.scrollPageDown = function (valuePixels) {
   browser.executeScript('window.scrollBy(0,' + valuePixels + ');')
+}
+
+// This function make type JavaScript Event  (Example: inputa dados sem usar o sendkeys (em caso de problemas de embaralhar CPF))
+Helper.prototype.typeScript = function (text, element) {
+  browser.executeScript('arguments[0].value = "'+ text +'";', element);
+}
+
+//To locate an invisible element (Example: hover botão invisível)
+Helper.prototype.mouseHoverElement = function (element) {
+  this.elementIsVisible(element);
+  browser.actions().mouseMove(element).perform();
 }
 
 // Check if an array is ascending ordered - V2
