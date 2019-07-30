@@ -16,7 +16,7 @@
   },
   "main": "protractor conf.js",
   "scripts": {
-    "test": "cd ./e2e && protractor conf.js",
+    "test": "cd ./e2e && protractor protractor.conf.js",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "precommit": "npm run lint",

@@ -16,21 +16,22 @@
 
 * Projeto estruturado em Page Objects (Design Pattern)
 * Estrutura de Pastas:
-    - `/features` contém os cenários de testes (a especificação dos cenários)
-    -  `/page_objects` contém os elementos de tela e o comportamento esperado do cenário
+    - `/features`
+    - `/page_objects` contém os elementos de tela e o comportamento esperado do cenário
+    - `scenarios` contém os cenários de testes (a especificação dos cenários)
+    - `shared_libs` contem um helper que da suporte para alguns testes autoamtizados
     - `/step_definitions` contém os steps (Dado, Quando, Então) descritos nas features e carregadas no page-objects
-    - `support` contém os arquivos que são carregados para execução dos testes
 
 
 ## Ambientes de teste e desenvolvimento
 
+* local: https://localhost:3000/
 * dev: ambiante.de.dev
-
 * homolog: ambiante.de.hom
 
 
 ## Browsers testados
-* Chrome (automação)
+* Chrome
 
 
 ## Rodar testes automatizados
@@ -64,7 +65,7 @@ npm run hom_test
 
 Cada `.features` está separada como funcionalidade da Aplicação. Cada Funcionalidade tem sua TAG, podendo rodar os cenários por Funcionalidade e cenários específicos
 
-* Para rodar os testes com TAG de Smoke
+* Para rodar os testes com tag Smoke
 
 ```shell
 npm run dev_smoke_test
