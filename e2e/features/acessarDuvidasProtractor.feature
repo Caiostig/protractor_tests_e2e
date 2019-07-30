@@ -2,8 +2,8 @@
 
 Funcionalidade: Acessar FAQ no site protractor
 Como um curioso
-Preciso efetuar a busca de protractor no Google
-Para estudar mais sobre a ferramenta
+Preciso efetuar a busca relacionada ao protractor
+Para resolver um cenário
     
     @automated
     Cenário: Acessar a página de dúvidas no site do Protractor
