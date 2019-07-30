@@ -8,8 +8,8 @@ class ProtractorPage {
     this.titleFaq = $('#faq')
   }
 
-  baseUrl (link) {
-    return browser.get(link)
+  visit (url) {
+    return browser.get(url)
   }
 
   accessFAQ () {

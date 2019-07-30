@@ -39,7 +39,7 @@ exports.config = {
   },
 
   specs: [
-    'features/*.feature'
+    'features/scenarios/*.feature'
   ],
 
   exclude: [
@@ -67,6 +67,11 @@ exports.config = {
   },
 
   onPrepare: function () {
+    //setar uma resolução
+    var width = 1310;
+    var height = 600;
+    browser.driver.manage().window().setSize(width, height);
+
     // Use only for angular applications
     // False: app Angular
     // True: app not Angular
