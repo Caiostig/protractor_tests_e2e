@@ -1,7 +1,7 @@
 [{
   "local": {
     "seleniumAddress": "http://localhost:4444/wd/hub",
-    "baseUrl": "http://localhost:3000/"
+    "baseUrl": "https://www.protractortest.org/#"
   },
 
   "localDev": {

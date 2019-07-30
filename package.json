@@ -28,7 +28,6 @@
     "hom_test": "npm run simple_build && export TEST_ENV=localHom && npm run test",
     "dev_smoke_test": "npm run simple_build && export TEST_ENV=localDev && npm run test && protractor protractorConf.js --cucumberOpts.tags='@smokeTest'",
     "test_CI": "cd ./e2e && protractor --cucumberOpts.tags='@CI' conf.js"
-
   },
   "standard": {
     "globals": []

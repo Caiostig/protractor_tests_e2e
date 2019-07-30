@@ -8,7 +8,7 @@ class ProtractorPage {
     this.titleFaq = $('#faq')
   }
 
-  visitUrl (link) {
+  baseUrl (link) {
     return browser.get(link)
   }
 
@@ -18,6 +18,9 @@ class ProtractorPage {
     this.helper.elementIsVisible(this.faqButton)
     return this.faqButton.click()
   }
-}
 
+  waitTitleFaqIsVisible() {
+    this.helper.elementIsVisible(this.titleFaq)
+  }
+}
 module.exports = ProtractorPage
