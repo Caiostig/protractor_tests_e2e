@@ -6,11 +6,11 @@
 
   "localDev": {
     "seleniumAddress": "http://localhost:4444/wd/hub",
-    "baseUrl": "http://ambiante.de.dev"
+    "baseUrl": "http://ambiante.dev"
   },
 
   "localHom": {
     "seleniumAddress": "http://localhost:4444/wd/hub",
-    "baseUrl": "http://ambiente.de.hom"
+    "baseUrl": "http://ambiente.hom"
   }
 }]

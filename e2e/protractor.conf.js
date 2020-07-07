@@ -51,8 +51,9 @@ exports.config = {
       args: [
         '--no-sandbox',
         '--disable-gpu',
+        // '--start-fullscreen',
         '--window-size=1280x1024',
-        // '--headless'
+        '--headless'
       ]
     }
   },
@@ -60,17 +61,17 @@ exports.config = {
   cucumberOpts: {
     require: '../features/step_definitions/*.js',
     // require: '../features/support/*.js',
-    tags: ['~@notImplemented', '~@backLog', '~@notRun', '@automated'],
-    format: ['json:results.json'],
+    tags: ['~@notImplemented', '~@notRun', '@automated'],
+    format: ['json:results.json', "../node_modules/cucumber-pretty"],
     profile: false,
     'no-source': true
   },
 
   onPrepare: function () {
     //setar uma resolução
-    var width = 1310;
-    var height = 600;
-    browser.driver.manage().window().setSize(width, height);
+    // var width = 1310;
+    // var height = 600;
+    // browser.driver.manage().window().setSize(width, height);
 
     // Use only for angular applications
     // False: app Angular
@@ -91,7 +92,7 @@ exports.config = {
       metadata: {
         'App Version': '0.0.1',
         'Test Environment': 'STAGING',
-        'Browser': 'Chrome  69.0.3497.100',
+        'Browser': 'Chrome  83.0.4103.116',
         'Platform': 'OSX',
         'Parallel': 'Scenarios',
         'Executed': 'Remote'

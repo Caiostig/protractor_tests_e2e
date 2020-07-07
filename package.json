@@ -2,17 +2,19 @@
   "name": "protractor_project",
   "version": "1.0.0",
   "description": "Projeto de testes",
+  "dependencies": {
+    "cucumber-pretty": "^1.5.0"
+  },
   "devDependencies": {
     "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",
-    "cucumber": "^5.0.2",
+    "cucumber": "^5.1.0",
     "cucumber-html-reporter": "^4.0.4",
     "eslint": "^5.14.1",
     "husky": "^1.1.2",
     "feature-express": "^0.4.13",
-    "protractor": "^5.4.1",
-    "protractor-cucumber-framework": "^6.1.1",
-    "protractor-cucumber-steps": "^1.3.2"
+    "protractor": "5.4.3",
+    "protractor-cucumber-framework": "^6.1.1"
   },
   "main": "protractor conf.js",
   "scripts": {
@@ -21,21 +23,19 @@
     "lint:fix": "eslint . --fix",
     "precommit": "npm run lint",
     "run_stop_webdriver": "kill -9 $(lsof -ti tcp:4444)",
-    "start_update_webdriver": "webdriver-manager update && webdriver-manager start --detach --seleniumPort=4444",
+    "start_webdriver": "webdriver-manager start --detach --seleniumPort=4444",
+    "update_webdriver": "webdriver-manager update --versions.chrome=83.0.4103.39",
     "simple_build": "cd ../protractor_testes_e2e && npm install",
-    "local_test": "npm run simple_build && export TEST_ENV=local && npm run test",
-    "dev_test": "npm run simple_build && export TEST_ENV=localDev && npm run test",
-    "hom_test": "npm run simple_build && export TEST_ENV=localHom && npm run test",
-    "dev_smoke_test": "npm run simple_build && export TEST_ENV=localDev && npm run test && protractor protractorConf.js --cucumberOpts.tags='@smokeTest'",
+    "local_test": "export TEST_ENV=local && npm run test",
+    "dev_test": "export TEST_ENV=localDev && npm run test",
+    "hom_test": "export TEST_ENV=localHom && npm run test",
+    "dev_smoke_test": "export TEST_ENV=localDev && npm run test && protractor protractorConf.js --cucumberOpts.tags='@smokeTest'",
+    "feature-express": "feature-express ./e2e/features/scenarios/ pt 3000",
     "test_CI": "cd ./e2e && protractor --cucumberOpts.tags='@CI' conf.js"
   },
   "standard": {
     "globals": []
   },
   "author": "Caio Stigliani",
-  "license": "MIT",
-  "dependencies": {
-    "chromedriver": "^2.43",
-    "yarn": "^1.10.1"
-  }
+  "license": "MIT"
 }

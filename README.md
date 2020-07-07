@@ -1,6 +1,9 @@
-# Testes E2E com Protractor (em JavaScript)
+# Testes E2E com Protractor
 
 * Automação de testes na camada de UI (User Interface) das especificações descritas nos arquivos `(/.feature)` para validação das regras de negócio, e se os critérios de aceite do sistema estão confiáveis.
+
+## Necessário instalação do Java SE Development Kit
+* (https://www.oracle.com/technetwork/pt/java/javase/downloads/index.html)
 
 
 ## Bibliotecas utilizadas
